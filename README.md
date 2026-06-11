@@ -10,6 +10,7 @@ A collection of agent skills for reverse engineering and dynamic instrumentation
 | **frida**   | Frida 17.x instrumentation: writing and debugging Frida scripts for iOS ARM64 and Android, hooking, Interceptor, Stalker, ObjC/Java bridges, SSL pinning bypass, and related tooling. |
 | **r2frida** | Dynamic analysis combining radare2 with Frida: attach to running processes, hook functions, trace calls, dump memory, and analyze obfuscated or live targets. |
 | **unreal5** | Unreal Engine 5 internal structures and memory layouts: UObject hierarchy, FNamePool, FUObjectArray, FProperty system, UFunction, FField, GWorld, Large World Coordinates, and key enums/flags for UE5 RE. |
+| **deobfuscation** | Binary deobfuscation and unpacking: generic framework for defeating software protection (string recovery, section dumping, API hooking, mprotect monitoring). Includes protector-specific sub-skills (VMProtect). |
 
 Each skill lives in its own directory with a `SKILL.md` (and optional `REFERENCE.md` / `EXAMPLES.md`).
 
@@ -31,6 +32,10 @@ agent-skills/
 │   └── REFERENCE.md
 ├── unreal5/       # Unreal Engine 5 structures & memory layouts
 │   └── SKILL.md
+├── deobfuscation/ # Binary deobfuscation & unpacking
+│   ├── SKILL.md           # Generic deobfuscation framework
+│   └── vmprotect/
+│       └── SKILL.md       # VMProtect-specific techniques
 ├── README.md
 └── LICENSE
 ```
